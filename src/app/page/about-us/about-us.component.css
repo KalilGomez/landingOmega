@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #3B82F6;
+  --secondary-color: #1E40AF;
+  --text-dark: #1E293B;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #F8FAFC, #E0F2FE);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Nosotros Imagen */
+.img-fluid {
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto */
+h2 {
+  color: var(--text-dark);
+}
+
+p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}

@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #3B82F6;
+  --secondary-color: #1E40AF;
+  --text-dark: #1E293B;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #F8FAFC, #E0F2FE);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Servicios Cards */
+.servicio-card {
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.card-text {
+  color: var(--text-muted);
+}
