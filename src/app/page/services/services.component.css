@@ -37,3 +37,84 @@
 .card-text {
   color: var(--text-muted);
 }
+/* Contenedor general */
+.products-hero {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+}
+
+/* Grid de dos columnas, se hace una columna en pantallas chicas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Estilo del card */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(20,20,30,0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+/* efecto sutil al pasar el mouse (opcional, dejalo si querés algo vivo) */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(20,20,30,0.08);
+}
+
+/* Imagen: ocupa la parte superior */
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* mantiene proporción */
+  overflow: hidden;
+  background: linear-gradient(180deg,#f6f6f7,#ffffff);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta la imagen si es necesario */
+  display: block;
+}
+
+/* Cuerpo con texto */
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex: 1;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.card-sub {
+  margin: 0;
+  color: #60656f;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Responsive: en móviles apila verticalmente */
+@media (max-width: 740px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .products-hero {
+    padding: 1.25rem;
+  }
+}
