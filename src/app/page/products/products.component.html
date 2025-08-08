@@ -4,253 +4,39 @@
     <div class="row text-center">
       <div class="col-lg-8 mx-auto">
         <h1 class="display-4 fw-bold text-dark mb-3">Nuestros Productos</h1>
-        <p class="lead text-muted mb-4">Descubre nuestra colección de anteojos y lentes de contacto de las mejores marcas</p>
+        <p class="lead text-muted mb-4">Descubre nuestra colección de anteojos y lentes de contacto de las mejores
+          marcas</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Filtros -->
-<section class="py-4 bg-white border-bottom">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex flex-wrap gap-2 justify-content-center">
-          <button class="btn btn-outline-primary active" data-filter="all">Todos</button>
-          <button class="btn btn-outline-primary" data-filter="sol">Anteojos de Sol</button>
-          <button class="btn btn-outline-primary" data-filter="receta">Anteojos de Receta</button>
-          <button class="btn btn-outline-primary" data-filter="lentes">Lentes de Contacto</button>
-          <button class="btn btn-outline-primary" data-filter="deportivos">Deportivos</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Productos Grid -->
 <section class="py-5">
-  <div class="container">
-    <div class="row g-4" id="productos-grid">
-      
-      <!-- Producto 1 - Anteojos de Sol -->
-      <div class="col-lg-4 col-md-6 producto-item" data-category="sol">
-        <div class="card border-0 shadow-sm h-100 producto-card">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=300&fit=crop" 
-                 class="card-img-top" alt="Ray-Ban Aviator">
-            <div class="card-overlay">
-              <button class="btn btn-light btn-sm me-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <button class="btn btn-light btn-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h5 class="card-title mb-0">Ray-Ban Aviator</h5>
-              <span class="badge bg-primary">Sol</span>
-            </div>
-            <p class="card-text text-muted small mb-3">Clásicos anteojos de sol con montura metálica y cristales polarizados</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="price">
-                <span class="h5 mb-0 text-primary fw-bold">$45.990</span>
-              </div>
-              <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
-            </div>
-          </div>
+  <section class="products-hero">
+    <div class="cards">
+      <article class="card">
+        <div class="card-image">
+          <img src="https://cdn.pixabay.com/photo/2022/02/19/14/02/glasses-7022673_1280.jpg" alt="Lentes oftálmicos" />
         </div>
-      </div>
-
-      <!-- Producto 2 - Anteojos de Receta -->
-      <div class="col-lg-4 col-md-6 producto-item" data-category="receta">
-        <div class="card border-0 shadow-sm h-100 producto-card">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&h=300&fit=crop" 
-                 class="card-img-top" alt="Oakley Frames">
-            <div class="card-overlay">
-              <button class="btn btn-light btn-sm me-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <button class="btn btn-light btn-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h5 class="card-title mb-0">Oakley Optical</h5>
-              <span class="badge bg-success">Receta</span>
-            </div>
-            <p class="card-text text-muted small mb-3">Montura deportiva ligera ideal para uso diario con lentes graduados</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="price">
-                <span class="h5 mb-0 text-primary fw-bold">$38.990</span>
-              </div>
-              <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
-            </div>
-          </div>
+        <div class="card-body">
+          <h3 class="card-title">Lentes oftálmicos</h3>
+          <p class="card-sub">Cristales para todas las necesidades.</p>
         </div>
-      </div>
+      </article>
 
-      <!-- Producto 3 - Lentes de Contacto -->
-      <div class="col-lg-4 col-md-6 producto-item" data-category="lentes">
-        <div class="card border-0 shadow-sm h-100 producto-card">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1601349174557-5b65c4b84e6d?w=400&h=300&fit=crop" 
-                 class="card-img-top" alt="Lentes de Contacto">
-            <div class="card-overlay">
-              <button class="btn btn-light btn-sm me-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <button class="btn btn-light btn-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h5 class="card-title mb-0">Acuvue Oasys</h5>
-              <span class="badge bg-info">Lentes</span>
-            </div>
-            <p class="card-text text-muted small mb-3">Lentes de contacto diarios con tecnología de hidratación avanzada</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="price">
-                <span class="h5 mb-0 text-primary fw-bold">$12.990</span>
-                <small class="text-muted">/mes</small>
-              </div>
-              <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
-            </div>
-          </div>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://cdn.pixabay.com/photo/2017/08/10/00/39/eyeglasses-2616530_1280.jpg" alt="Armazones con receta" />
         </div>
-      </div>
-
-      <!-- Producto 4 - Deportivos -->
-      <div class="col-lg-4 col-md-6 producto-item" data-category="deportivos">
-        <div class="card border-0 shadow-sm h-100 producto-card">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1556306535-38febf6782e7?w=400&h=300&fit=crop" 
-                 class="card-img-top" alt="Anteojos Deportivos">
-            <div class="card-overlay">
-              <button class="btn btn-light btn-sm me-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <button class="btn btn-light btn-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h5 class="card-title mb-0">Oakley Radar</h5>
-              <span class="badge bg-warning">Deportivo</span>
-            </div>
-            <p class="card-text text-muted small mb-3">Anteojos deportivos con tecnología Prizm para mejor rendimiento</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="price">
-                <span class="h5 mb-0 text-primary fw-bold">$89.990</span>
-              </div>
-              <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
-            </div>
-          </div>
+        <div class="card-body">
+          <h3 class="card-title">Armazones receta</h3>
+          <p class="card-sub">Completos y montados al aire.</p>
         </div>
-      </div>
-
-      <!-- Producto 5 - Anteojos de Sol Premium -->
-      <div class="col-lg-4 col-md-6 producto-item" data-category="sol">
-        <div class="card border-0 shadow-sm h-100 producto-card">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400&h=300&fit=crop" 
-                 class="card-img-top" alt="Prada Sunglasses">
-            <div class="card-overlay">
-              <button class="btn btn-light btn-sm me-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <button class="btn btn-light btn-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h5 class="card-title mb-0">Prada Linea Rossa</h5>
-              <span class="badge bg-primary">Sol</span>
-            </div>
-            <p class="card-text text-muted small mb-3">Diseño italiano exclusivo con cristales de alta calidad</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="price">
-                <span class="h5 mb-0 text-primary fw-bold">$125.990</span>
-              </div>
-              <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Producto 6 - Anteojos de Receta Modernos -->
-      <div class="col-lg-4 col-md-6 producto-item" data-category="receta">
-        <div class="card border-0 shadow-sm h-100 producto-card">
-          <div class="card-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&h=300&fit=crop" 
-                 class="card-img-top" alt="Modern Glasses">
-            <div class="card-overlay">
-              <button class="btn btn-light btn-sm me-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <button class="btn btn-light btn-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h5 class="card-title mb-0">Tom Ford Optical</h5>
-              <span class="badge bg-success">Receta</span>
-            </div>
-            <p class="card-text text-muted small mb-3">Montura de acetato premium con diseño contemporáneo</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="price">
-                <span class="h5 mb-0 text-primary fw-bold">$95.990</span>
-              </div>
-              <button class="btn btn-outline-primary btn-sm">Ver Detalles</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      </article>
     </div>
-  </div>
+  </section>
 </section>
 
 <!-- CTA Section -->
@@ -260,10 +46,6 @@
       <div class="col-lg-8 mx-auto">
         <h2 class="h1 mb-3">¿No encontraste lo que buscas?</h2>
         <p class="lead mb-4">Contáctanos y te ayudaremos a encontrar el producto perfecto para ti</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <button class="btn btn-light btn-lg">Contactar Asesor</button>
-          <button class="btn btn-outline-light btn-lg">Ver Catálogo completo</button>
-        </div>
       </div>
     </div>
   </div>
