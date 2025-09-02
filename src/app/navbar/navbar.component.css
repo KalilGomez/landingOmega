@@ -151,15 +151,15 @@
   .navbar-menu {
     display: none;
   }
-  
+
   .mobile-menu-button {
     display: block;
   }
-  
+
   .logo-text {
     display: none;
   }
-  
+
   .navbar-container {
     padding: 0 15px;
   }
@@ -169,7 +169,7 @@
   .navbar {
     height: 60px;
   }
-  
+
   .logo-icon {
     width: 35px;
     height: 35px;
@@ -216,10 +216,12 @@ body {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.4);
   padding: 20px;
   gap: 20px;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(211, 47, 47, 0.2);
 }
 
 @media (max-width: 768px) {
