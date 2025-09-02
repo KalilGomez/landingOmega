@@ -1,0 +1,51 @@
+/* src/app/app.component.css */
+.app-wrapper {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.main-content {
+  padding-top: 0;
+  min-height: 100vh;
+}
+
+.section {
+  min-height: 100vh;
+  scroll-margin-top: 70px; /* Altura del navbar */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilos específicos para cada sección */
+#home {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+#productos {
+  background: #f8f9fa;
+}
+
+#acerca-de {
+  background: white;
+}
+
+#servicios {
+  background: #f8f9fa;
+}
+
+#contacto {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    min-height: 90vh;
+    scroll-margin-top: 60px;
+    padding: 10px;
+  }
+}

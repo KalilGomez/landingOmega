@@ -1,8 +1,29 @@
 <div class="app-wrapper">
   <app-navbar></app-navbar>
+
   <main class="main-content">
-    <router-outlet></router-outlet>
+    <!-- Reemplaza router-outlet con las secciones -->
+    <section id="home" class="section">
+      <app-home></app-home>
+    </section>
+
+    <section id="servicios" class="section">
+      <app-services></app-services>
+    </section>
+
+    <section id="productos" class="section">
+      <app-products></app-products>
+    </section>
+
+    <section id="acerca de" class="section">
+      <app-about-us></app-about-us>
+    </section>
+
+    <section id="contacto" class="section">
+      <app-contact></app-contact>
+    </section>
   </main>
+
   <app-whatsapp></app-whatsapp>
   <app-footer></app-footer>
 </div>

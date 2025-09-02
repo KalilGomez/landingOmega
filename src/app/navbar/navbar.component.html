@@ -1,5 +1,6 @@
+<!-- src/app/shared/navbar/navbar.component.html -->
 <nav class="navbar">
-  <div class="nav-container">
+  <div class="navbar-container">
     <!-- Logo -->
     <div class="nav-logo">
       <a href="#" class="logo-link">
@@ -13,14 +14,22 @@
       </a>
     </div>
 
-    <!-- Desktop Menu -->
-    <div class="nav-menu">
-      <a routerLink="" class="nav-link">Inicio</a>
-      <a routerLink="productos" class="nav-link">Productos</a>
-      <a routerLink="servicios" class="nav-link">Servicios</a>
-      <a routerLink="acerca-de" class="nav-link">Nosotros</a>
-      <a routerLink="contacto" class="nav-link">Contacto</a>
+    <!-- Menu de navegación -->
+    <div class="navbar-menu">
+      <a *ngFor="let item of menuItems" class="nav-link" [class.active]="isActiveSection(item.id)"
+        (click)="navigateToSection(item.id)">
+        <span class="nav-icon">{{ item.icon }}</span>
+        <span class="nav-text">{{ item.label }}</span>
+      </a>
     </div>
 
+    <!-- Botón móvil (opcional) -->
+    <div class="mobile-menu-button">
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </nav>
