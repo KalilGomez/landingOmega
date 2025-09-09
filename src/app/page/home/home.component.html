@@ -1,12 +1,93 @@
-<!-- Home Component -->
+<!-- Contenedor principal del Home -->
 <section class="home-container">
+
+  <!-- Banner Full Width -->
+  <section class="banner-fullwidth">
+    <!-- Banner Carousel -->
+    <div id="carouselExample" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="6000">
+      
+      <!-- Indicators -->
+      <div class="carousel-indicators custom-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-image-container">
+            <img 
+              src="banner1.png" 
+              class="d-block w-100 carousel-image" 
+              alt="Tecnología de Vanguardia en Óptica Omega"
+              loading="eager">
+            <div class="carousel-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img 
+              src="assets/banner1.png" 
+              class="d-block w-100 carousel-image" 
+              alt="Atención Personalizada en Óptica Omega"
+              loading="lazy">
+            <div class="carousel-overlay"></div>
+          </div>
+          <div class="carousel-caption custom-carousel-caption">
+            <div class="caption-content">
+              <h2>Atención Personalizada</h2>
+              <p>Cuidamos tu visión con dedicación y profesionalismo</p>
+              <a href="#contacto" class="carousel-btn">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img 
+              src="assets/banner1.png" 
+              class="d-block w-100 carousel-image" 
+              alt="Experiencia Profesional en Óptica Omega"
+              loading="lazy">
+            <div class="carousel-overlay"></div>
+          </div>
+          <div class="carousel-caption custom-carousel-caption">
+            <div class="caption-content">
+              <h2>Experiencia Profesional</h2>
+              <p>Más de 10 años cuidando tu salud visual</p>
+              <a href="#productos" class="carousel-btn">Nuestros Productos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev custom-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next custom-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </section>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">Especialistas en Salud Visual</h1>
-        <p class="hero-subtitle">Tecnología, diseño y atención personalizada para cuidar tu visión</p>
-        <a routerLink="contacto" class="cta-button">Contactanos</a>
+        <p class="hero-subtitle">
+          Tecnología, diseño y atención personalizada para cuidar tu visión. 
+          Descubre la diferencia que hace la experiencia profesional.
+        </p>
+        <a routerLink="/contacto" class="cta-button">Contáctanos</a>
       </div>
 
       <!-- Imagen -->
@@ -14,9 +95,12 @@
         <div class="image-container">
           <img
             src="https://media.istockphoto.com/id/1627701437/es/foto/optometr%C3%ADa-sonrisa-y-mujer-con-gafas-graduadas-%C3%B3ptica-y-ayuda-al-cliente-con-producto-la.jpg?s=612x612&w=0&k=20&c=F3m3Zee9aYZmIa8cc7biG80eUnK7_Lm87LBtbP6GJjM="
-            alt="Optometrista con gafas" class="hero-image-img">
+            alt="Optometrista profesional atendiendo cliente con gafas en Óptica Omega"
+            class="hero-image-img"
+            loading="lazy">
         </div>
       </div>
     </div>
   </section>
+
 </section>

@@ -1,27 +1,47 @@
-/* src/app/app.component.css */
+/* app.component.css - ESTRUCTURA LIMPIA Y ORDENADA */
+
 .app-wrapper {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .main-content {
   padding-top: 0;
   min-height: 100vh;
+  width: 100%;
 }
 
 .section {
   min-height: 100vh;
-  scroll-margin-top: 70px; /* Altura del navbar */
+  scroll-margin-top: 70px;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
-/* Estilos específicos para cada sección */
+/* Sección home - Sin padding para permitir full width */
 #home {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  padding: 0; /* IMPORTANTE: Sin padding */
+  /* Asegurar que no haya scroll-margin-top que interfiera */
+  scroll-margin-top: 0;
+}
+
+/* Container para secciones normales */
+.content-container {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 }
 
 #productos {
@@ -47,5 +67,9 @@
     min-height: 90vh;
     scroll-margin-top: 60px;
     padding: 10px;
+  }
+  
+  .container {
+    padding: 0 15px;
   }
 }
