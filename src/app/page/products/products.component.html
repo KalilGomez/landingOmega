@@ -1,18 +1,16 @@
-<!-- Sección Hero de Products -->
-<section class="hero-section section">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-lg-8 mx-auto">
-        <h1>Nuestros Productos</h1>
-        <p class="lead">Descubre nuestra colección de anteojos y lentes de contacto de las mejores marcas</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Contenedor principal de Productos - MANEJA TODO EL CONTENIDO -->
+<section class="products-container">
 
-<!-- Sección de productos -->
-<section class="products-hero">
-  <div class="container">
+  <!-- Sección Hero de Products -->
+  <section class="hero-section section">
+    <div class="products-hero-content text-center">
+      <h1>Nuestros Productos</h1>
+      <p class="lead">Descubre nuestra colección de anteojos y lentes de contacto de las mejores marcas</p>
+    </div>
+  </section>
+
+  <!-- Sección de productos -->
+  <section class="products-hero">
     <div class="cards">
       
       <!-- Tarjeta 1: Lentes oftálmicos -->
@@ -42,19 +40,45 @@
           <p class="card-sub">Completos y montados al aire. Variedad de diseños modernos y clásicos para todos los gustos.</p>
         </div>
       </article>
+
+      <!-- Tarjeta 3: Lentes de Sol -->
+      <article class="card">
+        <div class="card-image">
+          <img 
+            src="https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649_1280.jpg" 
+            alt="Lentes de sol con protección UV"
+            loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Lentes de Sol</h3>
+          <p class="card-sub">Protección UV total con estilo. Marcas reconocidas y diseños exclusivos para cada ocasión.</p>
+        </div>
+      </article>
+
+      <!-- Tarjeta 4: Lentes de Contacto -->
+      <article class="card">
+        <div class="card-image">
+          <img 
+            src="https://cdn.pixabay.com/photo/2017/07/31/11/22/people-2557396_1280.jpg" 
+            alt="Lentes de contacto y productos de cuidado"
+            loading="lazy">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Lentes de Contacto</h3>
+          <p class="card-sub">Comodidad y libertad visual. Diarios, mensuales y especializados con adaptación profesional.</p>
+        </div>
+      </article>
       
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Sección CTA -->
-<section class="section cta-section">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-lg-8 mx-auto">
-        <h2>¿No encontraste lo que buscas?</h2>
-        <p class="lead">Contáctanos y te ayudaremos a encontrar el producto perfecto para ti</p>
-      </div>
+  <!-- Sección CTA -->
+  <section class="cta-section">
+    <div class="products-cta-content text-center">
+      <h2>¿No encontraste lo que buscas?</h2>
+      <p class="lead">Contáctanos y te ayudaremos a encontrar el producto perfecto para ti</p>
+      <a routerLink="/contacto" class="cta-button">Contáctanos Ahora</a>
     </div>
-  </div>
+  </section>
+
 </section>

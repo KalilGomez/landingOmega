@@ -17,6 +17,7 @@ body {
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 54px;
 }
 
 /* ===== VARIABLES CSS (COLORES Y TAMAÑOS) ===== */

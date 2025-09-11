@@ -1,20 +1,21 @@
-/* ===== HOME COMPONENT STYLES ===== */
+/* ===== HOME STYLES - BANNER DENTRO DEL CONTAINER ===== */
 
-/* Contenedor principal del home */
+/* Contenedor principal del home - MANEJA TODO incluyendo el navbar offset */
 .home-container {
   width: 100%;
+  max-width: 1200px; /* mismo ancho que otros containers */
+  margin: 0 auto; /* centrado */
+  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
   min-height: 100vh;
   overflow-x: hidden;
+  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
-/* ===== BANNER CAROUSEL STYLES ===== */
-.banner-fullwidth {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+/* ===== BANNER CAROUSEL STYLES (DENTRO DEL CONTAINER) ===== */
+/* Banner que respeta el ancho del container */
+.banner-container {
+  width: 100%;
+  margin-bottom: var(--spacing-2xl); /* separación con la siguiente sección */
 }
 
 .custom-carousel {
@@ -22,10 +23,13 @@
   min-height: 400px;
   max-height: 600px;
   overflow: hidden;
+  border-radius: var(--radius-lg); /* bordes redondeados ya que no es fullwidth */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* sombra para darle profundidad */
 }
 
 .carousel-inner {
   height: 100%;
+  border-radius: var(--radius-lg); /* hereda el border radius */
 }
 
 .carousel-item {
@@ -37,6 +41,7 @@
   position: relative;
   height: 100%;
   overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
 .carousel-image {
@@ -54,6 +59,7 @@
   bottom: 0;
   background: linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 86, 179, 0.5));
   z-index: 1;
+  border-radius: var(--radius-lg);
 }
 
 /* Caption del carousel */
@@ -151,6 +157,8 @@
   padding: var(--spacing-3xl) 0;
   position: relative;
   overflow: hidden;
+  border-radius: var(--radius-lg); /* consistente con el banner */
+  margin-top: var(--spacing-lg); /* separación del banner */
 }
 
 .hero-section::before {
@@ -166,7 +174,7 @@
 }
 
 .hero-container {
-  max-width: 1200px;
+  max-width: 100%; /* usa todo el ancho disponible del home-container */
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   display: grid;
@@ -296,9 +304,20 @@
 }
 
 @media (max-width: 768px) {
+  .home-container {
+    padding: 0 var(--spacing-sm); /* menos padding lateral en mobile */
+  }
+  
   .custom-carousel {
     height: 40vh;
     min-height: 300px;
+    border-radius: var(--radius-md); /* menos border radius en mobile */
+  }
+  
+  .carousel-inner,
+  .carousel-image-container,
+  .carousel-overlay {
+    border-radius: var(--radius-md);
   }
   
   .caption-content h2 {
@@ -318,6 +337,7 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
     text-align: center;
+    padding: 0; /* sin padding extra ya que home-container lo maneja */
   }
   
   .hero-title {
@@ -384,12 +404,27 @@
 
 /* ===== ANIMACIONES SUTILES ===== */
 @media (prefers-reduced-motion: no-preference) {
+  .banner-container {
+    animation: fadeInDown 0.8s ease-out;
+  }
+  
   .hero-content {
-    animation: slideInLeft 0.8s ease-out;
+    animation: slideInLeft 0.8s ease-out 0.3s both;
   }
   
   .hero-image {
-    animation: slideInRight 0.8s ease-out 0.2s both;
+    animation: slideInRight 0.8s ease-out 0.5s both;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -425,6 +460,7 @@
     transform: none;
   }
   
+  .banner-container,
   .hero-content,
   .hero-image {
     animation: none;
