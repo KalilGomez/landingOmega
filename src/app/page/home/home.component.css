@@ -3,12 +3,11 @@
 /* Contenedor principal del home - MANEJA TODO incluyendo el navbar offset */
 .home-container {
   width: 100%;
-  max-width: 1200px; /* mismo ancho que otros containers */
-  margin: 0 auto; /* centrado */
-  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 var(--spacing-md);
   min-height: 100vh;
   overflow-x: hidden;
-  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
 /* ===== BANNER CAROUSEL STYLES (DENTRO DEL CONTAINER) ===== */
@@ -57,7 +56,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 86, 179, 0.5));
   z-index: 1;
   border-radius: var(--radius-lg);
 }
@@ -70,7 +68,7 @@
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
-  color: var(--text-light);
+  color: #FFFFFF;
   width: 90%;
   max-width: 600px;
 }
@@ -91,8 +89,8 @@
 
 .carousel-btn {
   display: inline-block;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: var(--text-light);
+  background: linear-gradient(135deg, #B91C1C, #991B1B);
+  color: #FFFFFF;
   padding: var(--spacing-md) var(--spacing-2xl);
   border-radius: var(--radius-xl);
   text-decoration: none;
@@ -101,13 +99,13 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
 }
 
 .carousel-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-  color: var(--text-light);
+  box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
+  color: #FFFFFF;
 }
 
 /* Indicadores personalizados */
@@ -120,14 +118,14 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid var(--text-light);
+  border: 2px solid #FFFFFF;
   background: transparent;
   opacity: 0.6;
   transition: all 0.3s ease;
 }
 
 .custom-indicators button.active {
-  background: var(--text-light);
+  background: #FFFFFF;
   opacity: 1;
   transform: scale(1.2);
 }
@@ -153,7 +151,7 @@
 
 /* ===== HERO SECTION STYLES ===== */
 .hero-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
   padding: var(--spacing-3xl) 0;
   position: relative;
   overflow: hidden;
@@ -168,7 +166,7 @@
   right: 0;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   transform: translate(50%, -50%);
 }
@@ -193,7 +191,7 @@
 .hero-title {
   font-size: var(--font-5xl);
   font-weight: 700;
-  color: var(--text-primary);
+  color: #1F2937;
   line-height: 1.2;
   margin-bottom: var(--spacing-lg);
   position: relative;
@@ -206,21 +204,21 @@
   left: 0;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(90deg, #B91C1C, #991B1B);
   border-radius: 2px;
 }
 
 .hero-subtitle {
   font-size: var(--font-lg);
-  color: var(--text-secondary);
+  color: #6B7280;
   line-height: 1.6;
   margin-bottom: var(--spacing-2xl);
 }
 
 .cta-button {
   display: inline-block;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: var(--text-light);
+  background: linear-gradient(135deg, #B91C1C, #991B1B);
+  color: #FFFFFF;
   padding: var(--spacing-md) var(--spacing-2xl);
   border-radius: var(--radius-xl);
   text-decoration: none;
@@ -229,7 +227,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -251,8 +249,8 @@
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-  color: var(--text-light);
+  box-shadow: 0 6px 20px rgba(185, 28, 28, 0.4);
+  color: #FFFFFF;
 }
 
 /* Imagen del hero */
@@ -287,7 +285,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), transparent 60%);
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.1), transparent 60%);
   pointer-events: none;
 }
 

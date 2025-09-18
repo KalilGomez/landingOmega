@@ -1,7 +1,7 @@
 // src/app/shared/navbar/navbar.component.ts
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScrollSpyService } from '../services/scroll-spy.service';
+import { ScrollSpyService } from '../services/scroll-spy.service'; // Ajustar ruta según tu estructura
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   activeSection: string = 'home';
   private subscription: Subscription = new Subscription();
 
-  // Enlaces del menú
+  // Enlaces del menú (con IDs que coinciden con los del service)
   menuItems = [
     { id: 'home', label: 'Inicio', icon: '🏠' },
     { id: 'productos', label: 'Productos', icon: '👓' },
@@ -46,6 +46,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
    * Navegar a una sección específica
    */
   navigateToSection(sectionId: string): void {
+    console.log(`Navegando a sección: ${sectionId}`); // Debug
     this.scrollSpyService.scrollToSection(sectionId);
   }
 

@@ -2,18 +2,18 @@
 
 /* Hero Section del Contacto */
 .hero-section {
-  background-color: var(--bg-secondary);
+  background-color: #F9FAFB;
   border-bottom: 1px solid #e9ecef;
 }
 
 .hero-section h1 {
-  color: var(--text-primary);
+  color: #1F2937;
   font-size: var(--font-5xl);
   margin-bottom: var(--spacing-md);
 }
 
 .hero-section .lead {
-  color: var(--text-secondary);
+  color: #6B7280;
   font-size: var(--font-lg);
   max-width: 600px;
   margin: 0 auto;
@@ -21,7 +21,7 @@
 
 /* ===== FORMULARIO DE CONTACTO ===== */
 .contact-form {
-  background: var(--bg-primary);
+  background: #FFFFFF;
   padding: var(--spacing-2xl);
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@
   display: block;
   margin-bottom: var(--spacing-xs);
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1F2937;
   font-size: var(--font-base);
 }
 
@@ -55,20 +55,20 @@
   font-size: var(--font-base);
   font-family: inherit;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: #FFFFFF;
+  color: #1F2937;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  border-color: #B91C1C;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-secondary);
+  color: #6B7280;
   opacity: 0.7;
 }
 
@@ -81,8 +81,8 @@
 /* Botón del formulario */
 .contact-form button[type="submit"] {
   width: 100%;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: var(--text-light);
+  background: linear-gradient(135deg, #B91C1C, #991B1B);
+  color: #FFFFFF;
   padding: var(--spacing-md) var(--spacing-xl);
   border: none;
   border-radius: var(--radius-md);
@@ -96,7 +96,7 @@
 
 .contact-form button[type="submit"]:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.3);
 }
 
 .contact-form button[type="submit"]:active {
@@ -105,23 +105,23 @@
 
 /* ===== INFORMACIÓN DE CONTACTO ===== */
 .contact-info h5 {
-  color: var(--text-primary);
+  color: #1F2937;
   font-size: var(--font-xl);
   margin-bottom: var(--spacing-md);
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid #B91C1C;
   padding-bottom: var(--spacing-xs);
   display: inline-block;
 }
 
 .contact-info p {
-  color: var(--text-primary);
+  color: #1F2937;
   font-size: var(--font-base);
   margin-bottom: var(--spacing-sm);
   line-height: 1.6;
 }
 
 .contact-info strong {
-  color: var(--text-primary);
+  color: #1F2937;
   font-weight: 600;
 }
 
@@ -195,6 +195,6 @@
 
 .form-group input:valid:focus,
 .form-group textarea:valid:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+  border-color: #1E40AF;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
 }
