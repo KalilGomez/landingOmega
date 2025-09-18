@@ -17,14 +17,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   // Enlaces del menú (con IDs que coinciden con los del service)
   menuItems = [
-    { id: 'home', label: 'Inicio', icon: '🏠' },
-    { id: 'productos', label: 'Productos', icon: '👓' },
-    { id: 'acerca-de', label: 'Acerca de', icon: 'ℹ️' },
-    { id: 'servicios', label: 'Servicios', icon: '🔧' },
-    { id: 'contacto', label: 'Contacto', icon: '📞' }
+    { id: 'home', label: 'Inicio', icon: 'bi bi-house' },
+    { id: 'productos', label: 'Productos', icon: 'bi bi-eyeglasses' },
+    { id: 'acerca-de', label: 'Acerca de', icon: 'bi bi-info-circle' },
+    { id: 'servicios', label: 'Servicios', icon: 'bi bi-tools' },
+    { id: 'contacto', label: 'Contacto', icon: 'bi bi-telephone' }
   ];
 
-  constructor(private scrollSpyService: ScrollSpyService) {}
+  constructor(private scrollSpyService: ScrollSpyService) { }
 
   ngOnInit(): void {
     // Suscribirse a cambios de sección activa

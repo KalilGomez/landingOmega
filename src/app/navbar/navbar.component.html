@@ -1,33 +1,37 @@
 <!-- src/app/shared/navbar/navbar.component.html -->
-  <div class="navbar-container">
-    <!-- Logo -->
-    <div class="nav-logo">
-      <a href="#" class="logo-link">
-        <div class="logo-icon">
-          <img src="Logo.png" alt="Optica Omega Logo" class="logo-img">
-        </div>
-        <span class="logo-text">
-          <span class="logo-optica">OPTICA</span>
-          <span class="logo-omega">OMEGA</span>
-        </span>
-      </a>
-    </div>
-
-    <!-- Menu de navegación -->
-    <div class="navbar-menu">
-      <a *ngFor="let item of menuItems" class="nav-link" [class.active]="isActiveSection(item.id)"
-        (click)="navigateToSection(item.id)">
-        <span class="nav-icon">{{ item.icon }}</span>
-        <span class="nav-text">{{ item.label }}</span>
-      </a>
-    </div>
-
-    <!-- Botón móvil (opcional) -->
-    <div class="mobile-menu-button">
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+<div class="navbar-container">
+  <!-- Logo -->
+  <div class="nav-logo">
+    <a href="#" class="logo-link">
+      <div class="logo-icon">
+        <img src="Logo.png" alt="Optica Omega Logo" class="logo-img">
+      </div>
+      <span class="logo-text">
+        <span class="logo-optica">OPTICA</span>
+        <span class="logo-omega">OMEGA</span>
+      </span>
+    </a>
   </div>
+
+  <!-- Menú de navegación -->
+  <div class="navbar-menu">
+    <a
+      *ngFor="let item of menuItems"
+      class="nav-link d-flex align-items-center"
+      [class.active]="isActiveSection(item.id)"
+      (click)="navigateToSection(item.id)"
+    >
+      <i [class]="item.icon" class="me-2"></i>
+      <span class="nav-text">{{ item.label }}</span>
+    </a>
+  </div>
+
+  <!-- Botón móvil (opcional) -->
+  <div class="mobile-menu-button">
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</div>
