@@ -1,19 +1,65 @@
-/* ===== ABOUT US COMPONENT STYLES ===== */
-
-/* Hero Section del About Us */
-.hero-section {
-  background-color: #F9FAFB;
-  border-bottom: 1px solid #e9ecef;
+/* Contenedor principal del about us - MANEJA TODO incluyendo el navbar offset */
+.about-container {
+  width: 100%;
+  max-width: 1200px; /* mismo ancho que otros containers */
+  margin: 0 auto; /* centrado */
+  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
-.hero-section h1 {
+/* ===== HERO SECTION STYLES ABOUT ===== */
+.about-container .hero-section {
+  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+  padding: var(--spacing-3xl) 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: none;
+}
+
+.about-container .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--spacing-md);
+}
+
+.about-container .hero-section h1 {
   color: #1F2937;
   font-size: var(--font-5xl);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   font-weight: 700;
+  position: relative;
 }
 
-.hero-section .lead {
+.about-container .hero-section h1::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #B91C1C, #991B1B);
+  border-radius: 2px;
+}
+
+.about-container .hero-section .lead {
   color: #6B7280;
   font-size: var(--font-lg);
   max-width: 700px;
@@ -21,9 +67,16 @@
   font-weight: 400;
 }
 
-/* ===== SECCIÓN PRINCIPAL DE CONTENIDO ===== */
+/* ===== SECCIÓN PRINCIPAL DE CONTENIDO ABOUT ===== */
 .about-content {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
+}
+
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
 }
 
 /* Contenedor de imagen */
@@ -48,7 +101,7 @@
 
 /* Contenido de texto */
 .about-text {
-  padding-left: var(--spacing-lg);
+  padding: 0; /* removemos padding lateral ya que el grid maneja el espacio */
 }
 
 .about-text h2 {
@@ -78,23 +131,33 @@
   margin-bottom: var(--spacing-lg);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE DESIGN ABOUT ===== */
 @media (max-width: 768px) {
-  .hero-section h1 {
+  .about-container {
+    padding: 0 var(--spacing-sm); /* menos padding lateral en mobile */
+  }
+  
+  .about-container .hero-section {
+    padding: var(--spacing-2xl) 0;
+    border-radius: var(--radius-md);
+  }
+  
+  .about-container .hero-section h1 {
     font-size: var(--font-4xl);
   }
   
-  .hero-section .lead {
+  .about-container .hero-section .lead {
     font-size: var(--font-base);
   }
   
   .about-content {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
   }
   
-  .about-text {
-    padding-left: 0;
-    margin-top: var(--spacing-xl);
+  .about-content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    text-align: center;
   }
   
   .about-text h2 {
@@ -119,7 +182,15 @@
 
 @media (max-width: 480px) {
   .about-content {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .about-container .hero-section {
     padding: var(--spacing-xl) 0;
+  }
+  
+  .about-container .hero-section h1 {
+    font-size: var(--font-3xl);
   }
   
   .about-text h2 {
@@ -136,21 +207,36 @@
   }
 }
 
-/* ===== ANIMACIONES SUTILES ===== */
+/* ===== ANIMACIONES SUTILES ABOUT ===== */
 @media (prefers-reduced-motion: no-preference) {
+  .about-hero-content {
+    animation: fadeInDown 0.8s ease-out;
+  }
+  
   .about-text {
-    animation: slideInRight 0.6s ease-out;
+    animation: slideInRight 0.8s ease-out 0.3s both;
   }
   
   .about-image {
-    animation: slideInLeft 0.6s ease-out;
+    animation: slideInLeft 0.8s ease-out 0.5s both;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
@@ -161,11 +247,22 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -175,8 +272,24 @@
     transform: none;
   }
   
+  .products-container .card:hover {
+    transform: none;
+  }
+  
+  .products-container .card:hover .card-image img {
+    transform: none;
+  }
+  
+  .products-container .cta-button:hover {
+    transform: none;
+  }
+  
+  .about-hero-content,
   .about-text,
-  .about-image {
+  .about-image,
+  .products-hero-content,
+  .products-container .card,
+  .products-cta-content {
     animation: none;
   }
 }

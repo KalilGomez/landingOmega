@@ -25,7 +25,7 @@
 
 /* Sección home - Sin padding para permitir full width */
 #home {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f8f9fa;
   color: white;
   padding: 0; /* IMPORTANTE: Sin padding */
   /* Asegurar que no haya scroll-margin-top que interfiera */
@@ -57,7 +57,7 @@
 }
 
 #contacto {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: #f8f9fa;
   color: white;
 }
 

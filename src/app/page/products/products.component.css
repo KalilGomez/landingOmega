@@ -13,7 +13,7 @@
 
 /* ===== HERO SECTION STYLES ===== */
 .products-container .hero-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
   padding: var(--spacing-3xl) 0;
   position: relative;
   overflow: hidden;
@@ -30,7 +30,7 @@
   right: 0;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   transform: translate(50%, -50%);
 }
@@ -44,7 +44,7 @@
 .products-hero-content h1 {
   font-size: var(--font-5xl);
   font-weight: 700;
-  color: var(--text-primary);
+  color: #1F2937;
   margin-bottom: var(--spacing-lg);
   position: relative;
 }
@@ -57,13 +57,13 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(90deg, #B91C1C, #991B1B);
   border-radius: 2px;
 }
 
 .products-hero-content .lead {
   font-size: var(--font-lg);
-  color: var(--text-secondary);
+  color: #6B7280;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
@@ -84,7 +84,7 @@
 
 /* ===== PRODUCT CARD STYLES ===== */
 .products-container .card {
-  background: var(--bg-primary);
+  background: #FFFFFF;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -103,7 +103,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(90deg, #B91C1C, #991B1B);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -116,8 +116,8 @@
 
 .products-container .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 123, 255, 0.15);
-  border-color: var(--primary-color);
+  box-shadow: 0 12px 32px rgba(185, 28, 28, 0.15);
+  border-color: #B91C1C;
 }
 
 /* ===== CARD IMAGE STYLES ===== */
@@ -167,7 +167,7 @@
 }
 
 .products-container .card-title {
-  color: var(--text-primary);
+  color: #1F2937;
   font-size: var(--font-2xl);
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
@@ -175,7 +175,7 @@
 }
 
 .products-container .card-sub {
-  color: var(--text-secondary);
+  color: #6B7280;
   font-size: var(--font-base);
   line-height: 1.6;
   margin: 0;
@@ -184,8 +184,8 @@
 
 /* ===== SECCIÓN CTA ===== */
 .products-container .cta-section {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  color: var(--text-light);
+  background: linear-gradient(135deg, #1E40AF, #B91C1C);
+  color: #FFFFFF;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -211,7 +211,7 @@
 }
 
 .products-container .cta-section h2 {
-  color: var(--text-light);
+  color: #FFFFFF;
   font-size: var(--font-4xl);
   font-weight: 700;
   margin-bottom: var(--spacing-md);
@@ -228,7 +228,7 @@
 .products-container .cta-button {
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
-  color: var(--text-light);
+  color: #FFFFFF;
   padding: var(--spacing-md) var(--spacing-2xl);
   border-radius: var(--radius-xl);
   text-decoration: none;
@@ -245,11 +245,11 @@
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
-  color: var(--text-light);
+  color: #FFFFFF;
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE DESIGN PRODUCTS ===== */
 @media (max-width: 1024px) {
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -349,7 +349,7 @@
   }
 }
 
-/* ===== ANIMACIONES SUTILES ===== */
+/* ===== ANIMACIONES SUTILES PRODUCTS ===== */
 @media (prefers-reduced-motion: no-preference) {
   .products-hero-content {
     animation: fadeInDown 0.8s ease-out;
@@ -380,52 +380,9 @@
   }
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Respeta las preferencias de accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-  .products-container .card:hover {
-    transform: none;
-  }
-  
-  .products-container .card:hover .card-image img {
-    transform: none;
-  }
-  
-  .products-container .cta-button:hover {
-    transform: none;
-  }
-  
-  .products-hero-content,
-  .products-container .card,
-  .products-cta-content {
-    animation: none;
-  }
-}
-
-/* ===== ESTADOS DE FOCUS PARA ACCESIBILIDAD ===== */
+/* ===== ESTADOS DE FOCUS PARA ACCESIBILIDAD PRODUCTS ===== */
 .products-container .card:focus-within {
-  outline: 2px solid var(--primary-color);
+  outline: 2px solid #B91C1C;
   outline-offset: 2px;
 }
 

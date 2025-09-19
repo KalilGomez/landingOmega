@@ -13,7 +13,7 @@
 
 /* ===== HERO SECTION STYLES ===== */
 .services-container .hero-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
   padding: var(--spacing-3xl) 0;
   position: relative;
   overflow: hidden;
@@ -29,7 +29,7 @@
   right: 0;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   transform: translate(50%, -50%);
 }
@@ -43,7 +43,7 @@
 .services-hero-content h1 {
   font-size: var(--font-5xl);
   font-weight: 700;
-  color: var(--text-primary);
+  color: #1F2937;
   margin-bottom: var(--spacing-lg);
   position: relative;
 }
@@ -56,13 +56,13 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(90deg, #B91C1C, #991B1B);
   border-radius: 2px;
 }
 
 .services-hero-content .lead {
   font-size: var(--font-lg);
-  color: var(--text-secondary);
+  color: #6B7280;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
@@ -82,7 +82,7 @@
 
 /* ===== SERVICE CARD STYLES ===== */
 .servicio-card {
-  background: var(--bg-primary);
+  background: #FFFFFF;
   border: none;
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -99,7 +99,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(90deg, #B91C1C, #991B1B);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -111,7 +111,7 @@
 
 .servicio-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 123, 255, 0.15);
+  box-shadow: 0 12px 32px rgba(185, 28, 28, 0.15);
 }
 
 .servicio-card .card-body {
@@ -125,7 +125,7 @@
 .service-icon {
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(135deg, #B91C1C, #991B1B);
   border-radius: 50%;
   margin: 0 auto var(--spacing-lg);
   position: relative;
@@ -137,7 +137,7 @@
 .service-icon::after {
   content: '🔧'; /* Icono por defecto, puedes cambiarlo */
   font-size: 24px;
-  color: var(--text-light);
+  color: #FFFFFF;
 }
 
 /* Iconos específicos para cada servicio */
@@ -161,7 +161,7 @@
 .servicio-card .card-title {
   font-size: var(--font-xl);
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1F2937;
   margin-bottom: var(--spacing-md);
   text-align: center;
   position: relative;
@@ -169,7 +169,7 @@
 
 .servicio-card .card-text {
   font-size: var(--font-base);
-  color: var(--text-secondary);
+  color: #6B7280;
   line-height: 1.6;
   text-align: center;
   flex-grow: 1; /* para que el texto ocupe el espacio disponible */
@@ -320,7 +320,7 @@
 
 /* ===== ESTADOS DE FOCUS PARA ACCESIBILIDAD ===== */
 .servicio-card:focus-within {
-  outline: 2px solid var(--primary-color);
+  outline: 2px solid #B91C1C;
   outline-offset: 2px;
 }
 
