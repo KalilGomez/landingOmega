@@ -1,4 +1,4 @@
-/* Estilos actualizados para el navbar de Optica Omega */
+/* Estilos actualizados para el navbar de Optica Omega - PALETA CONSISTENTE */
 .navbar {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -48,7 +48,7 @@
 }
 
 .logo-link:hover {
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(185, 28, 28, 0.1) 100%);
+  background: transparent;
   transform: translateY(-1px);
 }
 
@@ -97,7 +97,7 @@
   text-transform: uppercase;
 }
 
-/* Navigation Menu - Modernizado */
+/* Navigation Menu - Con paleta consistente */
 .navbar-menu {
   display: flex;
   align-items: center;
@@ -121,34 +121,60 @@
   overflow: hidden;
 }
 
-.nav-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.15) 0%, rgba(185, 28, 28, 0.15) 100%);
-  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 25px;
+/* Solución más directa - resetear cualquier interferencia de Bootstrap Icons */
+.nav-link {
+  position: relative !important;
+  overflow: hidden !important;
 }
 
-.nav-link:hover::before {
-  left: 0;
+.nav-link .bi::before {
+  z-index: 2 !important;
+  position: relative !important;
 }
 
-.nav-link:hover {
-  color: #1F2937;
+.nav-link .nav-text {
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+/* TODOS los nav-links deben tener el pseudo-elemento */
+.navbar-menu .nav-link::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.1) 0%, rgba(153, 27, 27, 0.1) 100%) !important;
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 25px !important;
+  z-index: 1 !important;
+}
+
+.navbar-menu .nav-link:hover::before {
+  left: 0 !important;
+}
+
+.nav-link:hover,
+.nav-link.active:hover,
+.navbar-menu .nav-link:hover,
+.navbar-menu .nav-link.active:hover {
+  color: #B91C1C;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-.nav-link.active {
-  color: #ffffff;
-  background: linear-gradient(135deg, #1E40AF 0%, #B91C1C 100%);
-  box-shadow: 0 4px 15px rgba(185, 28, 28, 0.3);
-  font-weight: 600;
+/* FORZAMOS que TODOS los nav-links sean iguales - mayor especificidad */
+.nav-link,
+.nav-link.active,
+.navbar-menu .nav-link,
+.navbar-menu .nav-link.active {
+  color: #6B7280 !important; /* Mismo color gris para todos */
+  font-weight: 500 !important; /* Mismo peso para todos */
+  background: transparent !important; /* Sin fondo para todos */
+  box-shadow: none !important; /* Sin sombra para todos */
+  border-bottom: none !important; /* Sin borde para todos */
 }
 
 .nav-link.active::before {
@@ -166,7 +192,7 @@
   transform: translateX(-50%) scaleX(0);
   width: 20px;
   height: 3px;
-  background: linear-gradient(135deg, #1E40AF 0%, #B91C1C 100%);
+  background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
   border-radius: 2px;
   transition: transform 0.3s ease;
 }
@@ -184,6 +210,11 @@
   display: flex;
   align-items: center;
   z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.1);
 }
 
 .nav-text {
@@ -191,7 +222,7 @@
   z-index: 1;
 }
 
-/* Mobile Menu Button - Mejorado */
+/* Mobile Menu Button - Con paleta consistente */
 .mobile-menu-button {
   display: none;
   z-index: 1002;
@@ -216,7 +247,7 @@
 .hamburger span {
   width: 28px;
   height: 3px;
-  background: linear-gradient(135deg, #1E40AF 0%, #B91C1C 100%);
+  background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
@@ -373,7 +404,7 @@ html {
 /* Focus states for accessibility */
 .nav-link:focus,
 .hamburger:focus {
-  outline: 2px solid #1E40AF;
+  outline: 2px solid #B91C1C;
   outline-offset: 2px;
 }
 
@@ -392,29 +423,4 @@ body {
   body {
     padding-top: 65px;
   }
-}
-
-.nav-link {
-  font-weight: 500;
-  color: #444;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-link i {
-  font-size: 1.2rem;
-  transition: transform 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #0d6efd; /* azul bootstrap */
-}
-
-.nav-link:hover i {
-  transform: scale(1.2);
-}
-
-.nav-link.active {
-  color: #0d6efd;
-  font-weight: 600;
-  border-bottom: 2px solid #0d6efd;
 }

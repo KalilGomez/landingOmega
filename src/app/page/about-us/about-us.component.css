@@ -11,14 +11,14 @@
 
 /* ===== HERO SECTION STYLES ABOUT ===== */
 .about-container .hero-section {
-  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+ background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
   padding: var(--spacing-3xl) 0;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-2xl);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-bottom: none;
+  border-bottom: none; /* removemos el border del CSS original */
 }
 
 .about-container .hero-section::before {

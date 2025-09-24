@@ -27,7 +27,7 @@
 #home {
   background: #f8f9fa;
   color: white;
-  padding: 0; /* IMPORTANTE: Sin padding */
+  padding-top: 30px; /* IMPORTANTE: Sin padding */
   /* Asegurar que no haya scroll-margin-top que interfiera */
   scroll-margin-top: 0;
 }
@@ -46,19 +46,22 @@
 
 #productos {
   background: #f8f9fa;
+  padding-top: 30px;
 }
 
 #acerca-de {
-  background: white;
+  background: #f8f9fa;
+  padding-top: 30px;
 }
 
 #servicios {
   background: #f8f9fa;
+  padding-top: 30px;
 }
 
 #contacto {
   background: #f8f9fa;
-  color: white;
+  padding-top: 30px;
 }
 
 /* Responsive */
