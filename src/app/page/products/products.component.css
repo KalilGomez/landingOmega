@@ -1,26 +1,25 @@
 /* ===== PRODUCTS CONTAINER STYLES ===== */
 
-/* Contenedor principal de productos - MANEJA TODO incluyendo el navbar offset */
+/* Contenedor principal de productos */
 .products-container {
   width: 100%;
-  max-width: 1200px; /* mismo ancho que otros containers */
-  margin: 0 auto; /* centrado */
-  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  min-height: auto; /* Cambiado de 100vh */
   overflow-x: hidden;
-  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
 /* ===== HERO SECTION STYLES ===== */
 .products-container .hero-section {
   background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-2xl);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-bottom: none; /* removemos el border del CSS original */
+  border-bottom: none;
 }
 
 .products-container .hero-section::before {
@@ -47,6 +46,7 @@
   color: #1F2937;
   margin-bottom: var(--spacing-lg);
   position: relative;
+  padding-bottom: 0;
 }
 
 .products-hero-content h1::after {
@@ -78,8 +78,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-2xl);
-  padding: 0; /* removemos el padding ya que lo maneja el products-container */
-  margin: 0; /* removemos el margin del CSS original */
+  padding: 0;
+  margin: 0;
 }
 
 /* ===== PRODUCT CARD STYLES ===== */
@@ -91,14 +91,14 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  height: 100%; /* para que todas las cards tengan la misma altura */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .products-container .card::before {
   content: '';
-  position: top;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -123,7 +123,7 @@
   position: relative;
   overflow: hidden;
   height: 240px;
-  flex-shrink: 0; /* evita que se comprima */
+  flex-shrink: 0;
 }
 
 .card-image img {
@@ -137,7 +137,6 @@
   transform: scale(1.05);
 }
 
-/* Overlay sutil en hover */
 .card-image::after {
   content: '';
   position: absolute;
@@ -158,7 +157,7 @@
 .products-container .card-body {
   padding: var(--spacing-xl);
   text-align: center;
-  flex-grow: 1; /* ocupa el espacio restante */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,8 +186,8 @@
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  margin-top: var(--spacing-3xl);
-  padding: var(--spacing-3xl) 0;
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-2xl) 0;
 }
 
 .products-container .cta-section::before {
@@ -222,7 +221,6 @@
   margin: 0 auto var(--spacing-xl);
 }
 
-/* Botón CTA */
 .products-container .cta-button {
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
@@ -257,12 +255,13 @@
 
 @media (max-width: 768px) {
   .products-container {
-    padding: 0 var(--spacing-sm); /* menos padding lateral en mobile */
+    padding: 0 var(--spacing-sm);
   }
   
   .products-container .hero-section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
     border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
   }
   
   .products-hero-content h1 {
@@ -295,8 +294,9 @@
   }
   
   .products-container .cta-section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
     border-radius: var(--radius-md);
+    margin-top: var(--spacing-xl);
   }
   
   .products-container .cta-section h2 {
@@ -334,7 +334,7 @@
   }
   
   .products-container .cta-section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
   }
   
   .products-container .cta-section h2 {

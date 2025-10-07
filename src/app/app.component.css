@@ -7,72 +7,62 @@
   min-height: 100vh;
 }
 
-.main-content {
+main {
   padding-top: 0;
   min-height: 100vh;
   width: 100%;
 }
 
-.section {
-  min-height: 100vh;
+/* ESPACIADO UNIFORME PARA TODAS LAS SECCIONES */
+main > section {
   scroll-margin-top: 70px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  padding: var(--spacing-3xl) 0; /* Espaciado vertical uniforme */
 }
 
-/* Sección home - Sin padding para permitir full width */
+/* Primera sección (home) - menos padding superior */
 #home {
   background: #f8f9fa;
-  color: white;
-  padding-top: 30px; /* IMPORTANTE: Sin padding */
-  /* Asegurar que no haya scroll-margin-top que interfiera */
-  scroll-margin-top: 0;
-}
-
-/* Container para secciones normales */
-.content-container {
-  width: 100%;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
+  padding-top: var(--spacing-2xl); /* Menos espacio arriba del navbar */
+  padding-bottom: var(--spacing-3xl);
 }
 
 #productos {
   background: #f8f9fa;
-  padding-top: 30px;
-}
-
-#acerca-de {
-  background: #f8f9fa;
-  padding-top: 30px;
 }
 
 #servicios {
   background: #f8f9fa;
-  padding-top: 30px;
+}
+
+#acerca-de {
+  background: #f8f9fa;
 }
 
 #contacto {
   background: #f8f9fa;
-  padding-top: 30px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .section {
-    min-height: 90vh;
+  main > section {
     scroll-margin-top: 60px;
-    padding: 10px;
+    padding: var(--spacing-2xl) 0;
   }
   
-  .container {
-    padding: 0 15px;
+  #home {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  main > section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  #home {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
   }
 }

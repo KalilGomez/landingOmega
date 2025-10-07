@@ -1,61 +1,41 @@
+// footer.component.ts
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+
+declare var bootstrap: any; // Para usar Bootstrap JS
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  currentYear = new Date().getFullYear();
-  
-  socialLinks = [
-    {
-      name: 'Facebook',
-      url: '#',
-      icon: 'facebook'
-    },
-    {
-      name: 'Instagram',
-      url: '#',
-      icon: 'instagram'
-    },
-    {
-      name: 'Twitter',
-      url: '#',
-      icon: 'twitter'
-    },
-    {
-      name: 'LinkedIn',
-      url: '#',
-      icon: 'linkedin'
+
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  navigateToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
     }
-  ];
+  }
 
-  quickLinks = [
-    { name: 'Inicio', url: '#' },
-    { name: 'Productos', url: '#' },
-    { name: 'Servicios', url: '#' },
-    { name: 'Nosotros', url: '#' },
-    { name: 'Contacto', url: '#' }
-  ];
+  scrollToTop(): void {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: 'smooth' 
+    });
+  }
 
-  services = [
-    { name: 'Examen Visual', url: '#' },
-    { name: 'Anteojos Recetados', url: '#' },
-    { name: 'Lentes de Contacto', url: '#' },
-    { name: 'Anteojos de Sol', url: '#' },
-    { name: 'Reparaciones', url: '#' }
-  ];
-
-  // footer.component.ts
-scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
+  openModal(tipo: string): void {
+    const modalId = tipo === 'privacidad' ? 'privacidadModal' : 'terminosModal';
+    const modalElement = document.getElementById(modalId);
+    if (modalElement) {
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    }
+  }
 }

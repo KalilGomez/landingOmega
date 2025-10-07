@@ -1,24 +1,25 @@
-/* Contenedor principal del about us - MANEJA TODO incluyendo el navbar offset */
+/* ===== ABOUT CONTAINER STYLES ===== */
+
+/* Contenedor principal del about us */
 .about-container {
   width: 100%;
-  max-width: 1200px; /* mismo ancho que otros containers */
-  margin: 0 auto; /* centrado */
-  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  min-height: auto;
   overflow-x: hidden;
-  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
 /* ===== HERO SECTION STYLES ABOUT ===== */
 .about-container .hero-section {
- background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
-  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+  padding: var(--spacing-2xl) 0;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-2xl);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-bottom: none; /* removemos el border del CSS original */
+  border-bottom: none;
 }
 
 .about-container .hero-section::before {
@@ -45,6 +46,7 @@
   margin-bottom: var(--spacing-lg);
   font-weight: 700;
   position: relative;
+  padding-bottom: 0;
 }
 
 .about-container .hero-section h1::after {
@@ -69,7 +71,7 @@
 
 /* ===== SECCIÓN PRINCIPAL DE CONTENIDO ABOUT ===== */
 .about-content {
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-2xl) 0 0 0;
 }
 
 .about-content-grid {
@@ -101,7 +103,7 @@
 
 /* Contenido de texto */
 .about-text {
-  padding: 0; /* removemos padding lateral ya que el grid maneja el espacio */
+  padding: 0;
 }
 
 .about-text h2 {
@@ -111,12 +113,13 @@
   line-height: 1.3;
   margin-bottom: var(--spacing-lg);
   position: relative;
+  padding-bottom: 0;
 }
 
 .about-text h2::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -12px;
   left: 0;
   width: 60px;
   height: 4px;
@@ -134,12 +137,13 @@
 /* ===== RESPONSIVE DESIGN ABOUT ===== */
 @media (max-width: 768px) {
   .about-container {
-    padding: 0 var(--spacing-sm); /* menos padding lateral en mobile */
+    padding: 0 var(--spacing-sm);
   }
   
   .about-container .hero-section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
     border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
   }
   
   .about-container .hero-section h1 {
@@ -151,7 +155,7 @@
   }
   
   .about-content {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xl) 0 0 0;
   }
   
   .about-content-grid {
@@ -182,11 +186,11 @@
 
 @media (max-width: 480px) {
   .about-content {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-lg) 0 0 0;
   }
   
   .about-container .hero-section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
   }
   
   .about-container .hero-section h1 {
@@ -255,41 +259,15 @@
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Respeta las preferencias de accesibilidad para movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
   .about-image img:hover {
     transform: none;
   }
   
-  .products-container .card:hover {
-    transform: none;
-  }
-  
-  .products-container .card:hover .card-image img {
-    transform: none;
-  }
-  
-  .products-container .cta-button:hover {
-    transform: none;
-  }
-  
   .about-hero-content,
   .about-text,
-  .about-image,
-  .products-hero-content,
-  .products-container .card,
-  .products-cta-content {
+  .about-image {
     animation: none;
   }
 }

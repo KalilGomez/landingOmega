@@ -1,26 +1,25 @@
 /* ===== SERVICES CONTAINER STYLES ===== */
 
-/* Contenedor principal de servicios - MANEJA TODO incluyendo el navbar offset */
+/* Contenedor principal de servicios */
 .services-container {
   width: 100%;
-  max-width: 1200px; /* mismo ancho que home-container */
-  margin: 0 auto; /* centrado */
-  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  min-height: auto;
   overflow-x: hidden;
-  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
 /* ===== HERO SECTION STYLES ===== */
 .services-container .hero-section {
   background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-2xl);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-bottom: none; /* removemos el border del CSS original */
+  border-bottom: none;
 }
 
 .services-container .hero-section::before {
@@ -47,6 +46,7 @@
   color: #1F2937;
   margin-bottom: var(--spacing-lg);
   position: relative;
+  padding-bottom: 0;
 }
 
 .services-hero-content h1::after {
@@ -90,7 +90,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  height: 100%; /* para que todas las cards tengan la misma altura */
+  height: 100%;
 }
 
 .servicio-card::before {
@@ -136,26 +136,26 @@
 }
 
 .service-icon::after {
-  content: '🔧'; /* Icono por defecto, puedes cambiarlo */
+  content: '🔧';
   font-size: 24px;
   color: #FFFFFF;
 }
 
 /* Iconos específicos para cada servicio */
 .servicio-card:nth-child(1) .service-icon::after {
-  content: '🔧'; /* Reparación */
+  content: '🔧';
 }
 
 .servicio-card:nth-child(2) .service-icon::after {
-  content: '👥'; /* Asesoría */
+  content: '👥';
 }
 
 .servicio-card:nth-child(3) .service-icon::after {
-  content: '👁️'; /* Consulta visual */
+  content: '👁️';
 }
 
 .servicio-card:nth-child(4) .service-icon::after {
-  content: '🥽'; /* Lentes de contacto */
+  content: '🥽';
 }
 
 /* ===== CARD CONTENT STYLES ===== */
@@ -173,7 +173,7 @@
   color: #6B7280;
   line-height: 1.6;
   text-align: center;
-  flex-grow: 1; /* para que el texto ocupe el espacio disponible */
+  flex-grow: 1;
   margin-bottom: 0;
 }
 
@@ -187,12 +187,13 @@
 
 @media (max-width: 768px) {
   .services-container {
-    padding: 0 var(--spacing-sm); /* menos padding lateral en mobile */
+    padding: 0 var(--spacing-sm);
   }
   
   .services-container .hero-section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
     border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
   }
   
   .services-hero-content h1 {
@@ -201,6 +202,10 @@
   
   .services-hero-content .lead {
     font-size: var(--font-base);
+  }
+  
+  .services-content {
+    padding: var(--spacing-xl) 0;
   }
   
   .services-grid {
@@ -232,7 +237,7 @@
 
 @media (max-width: 480px) {
   .services-container .hero-section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
   }
   
   .services-hero-content h1 {
@@ -241,6 +246,10 @@
   
   .services-hero-content .lead {
     font-size: var(--font-sm);
+  }
+  
+  .services-content {
+    padding: var(--spacing-lg) 0;
   }
   
   .servicio-card .card-body {
