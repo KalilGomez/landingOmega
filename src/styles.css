@@ -216,6 +216,22 @@ img {
   background-color: var(--primary-color);
   color: var(--text-light);
 }
+/* Evitar cursor de texto en el navbar */
+/* Cursor normal en el navbar (no la manito) */
+.navbar *,
+.navbar a,
+.navbar button,
+.navbar .nav-link,
+.navbar-nav .nav-link,
+nav a,
+nav button,
+[routerLink] {
+  cursor: default !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
 
 /* ===== RESPONSIVE BREAKPOINTS BÁSICOS ===== */
 @media (max-width: 768px) {

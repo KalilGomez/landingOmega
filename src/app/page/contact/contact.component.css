@@ -1,14 +1,13 @@
 /* ===== CONTACT CONTAINER STYLES ===== */
 
-/* Contenedor principal del contact - MANEJA TODO incluyendo el navbar offset */
+/* Contenedor principal del contact */
 .contact-container {
   width: 100%;
-  max-width: 1200px; /* mismo ancho que otros containers */
-  margin: 0 auto; /* centrado */
-  padding: 0 var(--spacing-md); /* espaciado lateral estándar */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
   min-height: 100vh;
   overflow-x: hidden;
-  /* NO necesita padding-top porque el body ya lo maneja */
 }
 
 /* ===== HERO SECTION STYLES ===== */
@@ -68,26 +67,47 @@
   margin: 0 auto;
 }
 
-/* ===== CONTACT CONTENT STYLES ===== */
+/* ===== CONTACT CONTENT STYLES - GRID AJUSTADO ===== */
 .contact-content {
   padding: var(--spacing-2xl) 0;
 }
 
 .contact-content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
+  display: grid !important;
+  grid-template-columns: 60% 40% !important;
+  gap: var(--spacing-2xl);
   align-items: flex-start;
+  width: 100%;
+  margin: 0 !important;
+}
+
+/* Sobrescribir las clases de Bootstrap col-md-6 */
+.contact-content-grid > .col-md-6 {
+  max-width: 100% !important;
+  flex: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.contact-content-grid > .col-md-6:first-child {
+  grid-column: 1;
+}
+
+.contact-content-grid > .col-md-6:last-child {
+  grid-column: 2;
 }
 
 /* ===== FORMULARIO DE CONTACTO ===== */
 .contact-form {
   background: #FFFFFF;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--spacing-2xl);
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   border: 1px solid #f1f3f4;
   position: relative;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .contact-form::before {
@@ -103,6 +123,7 @@
 
 .form-group {
   margin-bottom: var(--spacing-lg);
+  width: 100%;
 }
 
 .form-group label {
@@ -122,7 +143,8 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
+  max-width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
   border: 2px solid #e9ecef;
   border-radius: var(--radius-md);
   font-size: var(--font-base);
@@ -130,6 +152,7 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #FFFFFF;
   color: #1F2937;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -176,14 +199,14 @@
   transform: translateY(0);
 }
 
-/* ===== INFORMACIÓN DE CONTACTO ===== */
+/* ===== INFORMACIÓN DE CONTACTO - MÁS COMPACTO ===== */
 .contact-info-section {
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .contact-info h5 {
   color: #1F2937;
-  font-size: var(--font-xl);
+  font-size: var(--font-lg);
   margin-bottom: var(--spacing-md);
   border-bottom: 3px solid #B91C1C;
   padding-bottom: var(--spacing-xs);
@@ -204,7 +227,7 @@
 
 /* Espaciado específico para horarios */
 .contact-info h5.mt-4 {
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-xl);
 }
 
 /* ===== MAPA ===== */
@@ -231,7 +254,7 @@
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .contact-container {
-    padding: 0 var(--spacing-sm); /* menos padding lateral en mobile */
+    padding: 0 var(--spacing-sm);
   }
   
   .contact-container .hero-section {
