@@ -21,28 +21,49 @@
 
       <!-- Info de contacto -->
       <div class="footer-contact">
-        <p>📍 Av. Dr. Ricardo Balbín 4800, San Miguel</p>
-        <p>📞 (011) 2288-9080</p>
-        <p>✉️ <a href="mailto:info&#64;opticaomega.com.ar">info&#64;opticaomega.com.ar</a></p>
+        <p>
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>Av. Dr. Ricardo Balbín 4800, San Miguel</span>
+        </p>
+        <p>
+          <i class="bi bi-telephone-fill"></i>
+          <span>(011) 2288-9080</span>
+        </p>
+        <p>
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:info&#64;opticaomega.com.ar">info&#64;opticaomega.com.ar</a>
+        </p>
       </div>
 
       <!-- Enlaces -->
       <div class="footer-links">
-        <a href="#home" (click)="navigateToSection('home'); $event.preventDefault()">Inicio</a>
-        <a href="#productos" (click)="navigateToSection('productos'); $event.preventDefault()">Productos</a>
-        <a href="#servicios" (click)="navigateToSection('servicios'); $event.preventDefault()">Servicios</a>
-        <a href="#acerca-de" (click)="navigateToSection('acerca-de'); $event.preventDefault()">Nosotros</a>
-        <a href="#contacto" (click)="navigateToSection('contacto'); $event.preventDefault()">Contacto</a>
+        <a href="#home" (click)="navigateToSection('home'); $event.preventDefault()">
+          <i class="bi bi-house-fill"></i>
+          <span>Inicio</span>
+        </a>
+        <a href="#productos" (click)="navigateToSection('productos'); $event.preventDefault()">
+          <i class="bi bi-eyeglasses"></i>
+          <span>Productos</span>
+        </a>
+        <a href="#servicios" (click)="navigateToSection('servicios'); $event.preventDefault()">
+          <i class="bi bi-gear-fill"></i>
+          <span>Servicios</span>
+        </a>
+        <a href="#acerca-de" (click)="navigateToSection('acerca-de'); $event.preventDefault()">
+          <i class="bi bi-info-circle-fill"></i>
+          <span>Nosotros</span>
+        </a>
+        <a href="#contacto" (click)="navigateToSection('contacto'); $event.preventDefault()">
+          <i class="bi bi-telephone-fill"></i>
+          <span>Contacto</span>
+        </a>
       </div>
 
       <!-- Redes Sociales -->
       <div class="footer-social">
         <a href="https://www.instagram.com/opticaomega.sm/" target="_blank" class="social-icon instagram"
           aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2.2c3.2 0 3.6.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.67 4.77-4.92 4.92-1.26.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.23-.15-4.77-1.69-4.92-4.92C2.21 15.63 2.2 15.24 2.2 12s.01-3.58.07-4.85c.15-3.23 1.69-4.77 4.92-4.92C8.42 2.21 8.8 2.2 12 2.2zM12 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm6.4-1.85a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z" />
-          </svg>
+          <i class="bi bi-instagram"></i>
         </a>
       </div>
     </div>

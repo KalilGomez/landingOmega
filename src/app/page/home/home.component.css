@@ -320,6 +320,60 @@
   border-radius: 2px;
 }
 
+/* Controles del carousel - Diseño elegante y moderno */
+.custom-control-prev,
+.custom-control-next {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.banner-container:hover .custom-control-prev,
+.banner-container:hover .custom-control-next {
+  opacity: 1;
+}
+
+.custom-control-prev {
+  left: 24px;
+}
+
+.custom-control-next {
+  right: 24px;
+}
+
+.custom-control-prev:hover,
+.custom-control-next:hover {
+  background: #FFFFFF;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos de flechas elegantes */
+.custom-control-prev .carousel-control-prev-icon,
+.custom-control-next .carousel-control-next-icon {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(85%) saturate(3217%) hue-rotate(347deg) brightness(88%) contrast(98%);
+  width: 24px;
+  height: 24px;
+}
+
+.custom-control-prev:hover .carousel-control-prev-icon,
+.custom-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(4456%) hue-rotate(351deg) brightness(83%) contrast(94%);
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
   .custom-carousel {
@@ -510,3 +564,4 @@
     transform: none;
   }
 }
+

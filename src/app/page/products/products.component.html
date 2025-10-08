@@ -41,7 +41,7 @@
         </div>
       </article>
 
-      <!-- Tarjeta 4: Lentes de Contacto -->
+      <!-- Tarjeta 3: Lentes de Contacto -->
       <article class="card">
         <div class="card-image">
           <img 
@@ -63,7 +63,10 @@
     <div class="products-cta-content text-center">
       <h2>¿No encontraste lo que buscas?</h2>
       <p class="lead">Contáctanos y te ayudaremos a encontrar el producto perfecto para ti</p>
-      <a routerLink="/contacto" class="cta-button">Contáctanos Ahora</a>
+      <!-- Botón actualizado: cambié <a routerLink> por <button (click)> -->
+      <button (click)="scrollToContact()" class="cta-button">
+        Contáctanos Ahora
+      </button>
     </div>
   </section>
 
