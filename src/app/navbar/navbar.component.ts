@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   activeSection: string = 'home';
+  isMobileMenuOpen: boolean = false;
   private subscription: Subscription = new Subscription();
 
   // Enlaces del menú (con IDs que coinciden con los del service)
@@ -48,6 +49,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   navigateToSection(sectionId: string): void {
     console.log(`Navegando a sección: ${sectionId}`); // Debug
     this.scrollSpyService.scrollToSection(sectionId);
+    
+    // Cerrar menú móvil al navegar
+    if (this.isMobileMenuOpen) {
+      this.closeMobileMenu();
+    }
   }
 
   /**
@@ -62,5 +68,27 @@ export class NavbarComponent implements OnInit, OnDestroy {
    */
   scrollToTop(): void {
     this.scrollSpyService.scrollToTop();
+  }
+
+  /**
+   * Toggle del menú móvil
+   */
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    
+    // Prevenir scroll del body cuando el menú está abierto
+    if (this.isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  /**
+   * Cerrar menú móvil
+   */
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+    document.body.style.overflow = '';
   }
 }

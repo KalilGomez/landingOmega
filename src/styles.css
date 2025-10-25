@@ -17,6 +17,7 @@ body {
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* NO padding-top aquí - cada sección maneja su propio spacing */
 }
 
 /* ===== VARIABLES CSS (COLORES Y TAMAÑOS) ===== */
@@ -216,6 +217,7 @@ img {
   background-color: var(--primary-color);
   color: var(--text-light);
 }
+
 /* Evitar cursor de texto en el navbar */
 /* Cursor normal en el navbar (no la manito) */
 .navbar *,
